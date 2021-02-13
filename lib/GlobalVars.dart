@@ -8,4 +8,4 @@ Color whiteColor = new Color(0xFFFFFFFF);
 Color selectionColor = new Color(0xFF3F479D);
 Color itemColor = new Color(0xFF505FF6);
 
-TextStyle confortaa = new TextStyle(fontFamily: "Comfortaa");
+TextStyle comfortaa = new TextStyle(fontFamily: "Comfortaa");

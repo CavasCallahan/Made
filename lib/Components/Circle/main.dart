@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:made/GlobalVars.dart';
 
 class Circle extends StatelessWidget {
   final double width;
