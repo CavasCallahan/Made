@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:made/GlobalVars.dart';
-import 'package:made/Screens/Register/main.dart';
-//import 'package:made/Screens/Welcome/main.dart';
+import 'package:made/Screens/Welcome/main.dart';
 
 void main() {
   runApp(MyApp());
@@ -16,6 +15,6 @@ class MyApp extends StatelessWidget {
         title: 'M.D.E Security',
         theme:
             ThemeData(primaryColor: darkPrimaryColor, fontFamily: "Comfortaa"),
-        home: RegisterScreen());
+        home: WelcomeScreen());
   }
 }

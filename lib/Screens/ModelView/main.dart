@@ -1,39 +1,35 @@
 import 'package:flutter/material.dart';
 import 'package:made/GlobalVars.dart';
 
-class EventScreen extends StatefulWidget {
-  @override
-  _EventScreenState createState() => _EventScreenState();
-}
+class ModelScreen extends StatelessWidget {
+  final String title;
 
-class _EventScreenState extends State<EventScreen> {
+  ModelScreen({
+    @required this.title,
+  });
+
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Column(
+    return Scaffold(
+      backgroundColor: darkPrimaryColor,
+      appBar: AppBar(),
+      body: Column(
         children: [
           Container(
-            color: darkPrimaryColor,
-            height: 250,
-            child: Row(
-              children: [
-                Align(
+              height: 200,
+              child: Align(
                   alignment: Alignment.bottomLeft,
                   child: Padding(
                     padding: const EdgeInsets.all(20),
                     child: Text(
-                      "Events",
+                      title,
                       style: TextStyle(
                           fontSize: 30,
                           fontFamily: "Comfortaa",
                           fontWeight: FontWeight.normal,
                           color: whiteColor),
                     ),
-                  ),
-                )
-              ],
-            ),
-          ),
+                  )))
         ],
       ),
     );

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:made/Components/Button/main.dart';
 import 'package:made/Components/TextBox/main.dart';
 import 'package:made/GlobalVars.dart';
+import 'package:made/Screens/Main/main.dart';
 
 class LoginScreen extends StatelessWidget {
   @override
@@ -47,7 +48,7 @@ class LoginScreen extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(40),
             child: Button(
-              onTaped: (() => print("object")),
+              onTaped: (() => Navigator.of(context).push(_createRoute())),
               height: 64,
               width: 285,
               background: secondaryPrimaryColor,
@@ -62,4 +63,20 @@ class LoginScreen extends StatelessWidget {
       ),
     );
   }
+}
+
+Route _createRoute() {
+  return PageRouteBuilder(
+      pageBuilder: (context, animation, secondaryAnimation) => MainScreen(),
+      transitionsBuilder: (context, animation, secondaryAnimation, child) {
+        var begin = Offset(0.0, 1.0);
+        var end = Offset.zero;
+        var curve = Curves.ease;
+        var tween =
+            Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
+        return SlideTransition(
+          position: animation.drive(tween),
+          child: child,
+        );
+      });
 }

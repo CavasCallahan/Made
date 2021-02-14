@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:made/GlobalVars.dart';
-import 'package:made/Screens/Event/main.dart';
+import 'package:made/Screens/ModelView/main.dart';
 
 class MainScreen extends StatelessWidget {
   @override
@@ -44,16 +44,24 @@ class MainScreen extends StatelessWidget {
           ),
           body: TabBarView(children: [
             Center(
-              child: EventScreen(),
+              child: ModelScreen(
+                title: "Event",
+              ),
             ),
             Center(
-              child: Text("Agents"),
+              child: ModelScreen(
+                title: "Agent",
+              ),
             ),
             Center(
-              child: Text("Protocols"),
+              child: ModelScreen(
+                title: "Protocols",
+              ),
             ),
             Center(
-              child: Text("Documents"),
+              child: ModelScreen(
+                title: "Documents",
+              ),
             )
           ]),
         ),
