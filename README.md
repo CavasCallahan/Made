@@ -1,6 +1,6 @@
-# Made
+# Mde Security
 
-A new Flutter project.
+A app that allow to acess private content from Mde.
 
 ## Getting Started
 
