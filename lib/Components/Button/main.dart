@@ -4,7 +4,6 @@ class Button extends StatelessWidget {
   final double height;
   final double width;
   final Color background;
-  final Color foreground;
   final double radius;
   final Text content;
   final Function onTaped;
@@ -14,7 +13,6 @@ class Button extends StatelessWidget {
       this.height,
       this.width,
       this.background,
-      this.foreground,
       this.radius,
       this.content});
 
