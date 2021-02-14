@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:made/Components/Button/main.dart';
 import 'package:made/Components/Wave/main.dart';
 import 'package:made/GlobalVars.dart';
 import 'package:made/Screens/Login/main.dart';
@@ -28,19 +29,17 @@ class WelcomeScreen extends StatelessWidget {
           ),
           Padding(
             padding: const EdgeInsets.all(40),
-            child: FlatButton(
-                onPressed: (() {
-                  Navigator.of(context).push(_createRoute());
-                }),
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10)),
-                color: secondaryPrimaryColor,
-                height: 64,
-                minWidth: 285,
-                child: Text(
-                  "START",
-                  style: TextStyle(fontSize: 30, color: whiteColor),
-                )),
+            child: Button(
+              onTaped: (() => Navigator.of(context).push(_createRoute())),
+              height: 64,
+              width: 285,
+              background: secondaryPrimaryColor,
+              radius: 10,
+              content: Text(
+                "START",
+                style: TextStyle(color: whiteColor, fontSize: 30),
+              ),
+            ),
           )
         ],
       ),
