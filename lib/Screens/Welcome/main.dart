@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:made/Components/Wave/main.dart';
 import 'package:made/GlobalVars.dart';
-import 'package:made/Screens/Event/main.dart';
+import 'package:made/Screens/Login/main.dart';
 
 class WelcomeScreen extends StatelessWidget {
   @override
@@ -30,8 +30,7 @@ class WelcomeScreen extends StatelessWidget {
             padding: const EdgeInsets.all(40),
             child: FlatButton(
                 onPressed: (() {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => EventScreen()));
+                  Navigator.of(context).push(_createRoute());
                 }),
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10)),
@@ -47,4 +46,20 @@ class WelcomeScreen extends StatelessWidget {
       ),
     );
   }
+}
+
+Route _createRoute() {
+  return PageRouteBuilder(
+      pageBuilder: (context, animation, secondaryAnimation) => LoginScreen(),
+      transitionsBuilder: (context, animation, secondaryAnimation, child) {
+        var begin = Offset(0.0, 1.0);
+        var end = Offset.zero;
+        var curve = Curves.ease;
+        var tween =
+            Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
+        return SlideTransition(
+          position: animation.drive(tween),
+          child: child,
+        );
+      });
 }

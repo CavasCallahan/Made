@@ -34,7 +34,6 @@ class _EventScreenState extends State<EventScreen> {
               ],
             ),
           ),
-          Stack(children: [ListView()])
         ],
       ),
     );
