@@ -23,19 +23,19 @@ class MainScreen extends StatelessWidget {
                 indicatorColor: Colors.transparent,
                 tabs: [
                   Tab(
-                    icon: Icon(Icons.event),
+                    icon: Icon(Icons.emoji_events),
                     text: "Events",
                   ),
                   Tab(
-                    icon: Icon(Icons.person),
+                    icon: Icon(Icons.military_tech),
                     text: "Agents",
                   ),
                   Tab(
-                    icon: Icon(Icons.dock),
+                    icon: Icon(Icons.inventory),
                     text: "Protocols",
                   ),
                   Tab(
-                    icon: Icon(Icons.file_copy),
+                    icon: Icon(Icons.folder),
                     text: "Documents",
                   )
                 ],
